@@ -16,6 +16,9 @@ public class GiraffeMovement : MonoBehaviour
     public float offFloat = 1f;
     public int stats = 0;
     public int points = 0;
+
+    public float fireRate = 800f;
+    float tempFireRate = 0;
     [SerializeField] int HP;
 
     bool shot;
@@ -38,24 +41,36 @@ public class GiraffeMovement : MonoBehaviour
         
     }
 
+
+    private void Update()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+           
+                if (tempFireRate <= 0f)
+                {
+                    Debug.Log("FIRE!");
+                    FireBullet();
+                    shot = true;
+                    tempFireRate = (float)(1 / (fireRate/60));
+                    Debug.Log(tempFireRate);
+                }
+                tempFireRate -= Time.deltaTime;
+
+            
+        }
+        else
+        {
+            tempFireRate = 0;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
 
 
-        if (Input.GetButton("Fire1"))
-        {
-            if (!shot)
-            {
-                Debug.Log("FIRE!");
-                FireBullet();
-                shot = true;
-            }
-        }
-        else
-        {
-            shot = false;
-        }
+       
 
 
 
