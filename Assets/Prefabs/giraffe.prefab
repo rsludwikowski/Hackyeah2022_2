@@ -51,8 +51,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6529396, y: 5.534447, z: 2.8352914}
-  m_Center: {x: -0.2911762, y: 2.7436936, z: -0.105882406}
+  m_Size: {x: 1.6529396, y: 12.33974, z: 2.8352914}
+  m_Center: {x: -0.2911762, y: 6.14634, z: -0.105882406}
 --- !u!114 &4262447884005262084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c2a411782171447b2210eb0e76a610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   Bullet: {fileID: 5384589656286250061, guid: a96be9ed1bff4e6408737f3d31c54428, type: 3}
   bulletSpawnPoint: {fileID: 6251491757920230377}
   bulletEnergy: -50
@@ -90,7 +90,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &5939725202208819718
 MonoBehaviour:
