@@ -62,9 +62,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 5384589656286250061, guid: a96be9ed1bff4e6408737f3d31c54428, type: 3}
   bulletSpawnPoint: {fileID: 0}
   bulletEnergy: 1
+  particles: {fileID: 0}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
   HP: 0
@@ -4998,6 +4999,7 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
   bulletEnergy: 1
+  particles: {fileID: 0}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
   HP: 0
@@ -5017,6 +5019,7 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
   bulletEnergy: 1
+  particles: {fileID: 0}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
   HP: 0
