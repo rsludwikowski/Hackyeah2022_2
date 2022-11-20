@@ -147,7 +147,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 3
   bulletSpawn: {fileID: 5087128709408409611}
-  bulletPrefab: {fileID: 1000041450435124257, guid: 98c954af3f42b714a8535d63a4687e82, type: 3}
+  bulletPrefab: {fileID: 5384589656286250061, guid: a96be9ed1bff4e6408737f3d31c54428, type: 3}
   bulletSpeed: 1
   bulletTime: 300
   lastfired: 2.02
