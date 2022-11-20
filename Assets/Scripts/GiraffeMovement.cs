@@ -14,6 +14,8 @@ public class GiraffeMovement : MonoBehaviour
     public ParticleSystem particles;
     public Vector3 offsetSpawn = new Vector3( 0f, 0f, 0f );
     public float offFloat = 1f;
+    public int stats = 0;
+    public int points = 0;
     [SerializeField] int HP;
 
     bool shot;
@@ -64,5 +66,17 @@ public class GiraffeMovement : MonoBehaviour
 
         rb.MovePosition(rb.position + MoveVec);
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        string colTag = collision.gameObject.tag;
+        switch (colTag)
+        {
+            case "Can":
+                stats++; //za zebranie puszki bonus do statow
+                points++; //zebrany punkt
+                break;
+        }
     }
 }

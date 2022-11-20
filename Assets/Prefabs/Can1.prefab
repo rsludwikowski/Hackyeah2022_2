@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6647803208213890850}
   - component: {fileID: 2126085104541622266}
   - component: {fileID: 796467093476240206}
-  - component: {fileID: 1305855413041218850}
   - component: {fileID: 3551501981181140800}
+  - component: {fileID: 7170961057688451687}
   m_Layer: 0
   m_Name: Can1
-  m_TagString: Untagged
+  m_TagString: Can
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,22 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1305855413041218850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5384589656286250061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e98c5bbfdfc38b4b80c85f81e98e45c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3551501981181140800}
-  bulletDamage: 0
-  speed: 10
-  size: 0
 --- !u!54 &3551501981181140800
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,6 +116,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &7170961057688451687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5384589656286250061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3d7d12ab9134d4eb32ebb0bdfd8a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3551501981181140800}
 --- !u!1001 &7975143319532229488
 PrefabInstance:
   m_ObjectHideFlags: 0
