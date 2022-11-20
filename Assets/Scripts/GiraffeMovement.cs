@@ -16,10 +16,12 @@ public class GiraffeMovement : MonoBehaviour
     public float offFloat = 1f;
     [SerializeField] int HP;
 
+    bool shot;
+
     // Start is called before the first frame update
     void Awake()
     {
-        
+        shot = false;
         rb = gameObject.GetComponent<Rigidbody>();
         Assert.IsNotNull(rb, "The following object is not fully set up: " + name);
         HP = 100;
@@ -40,8 +42,16 @@ public class GiraffeMovement : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            Debug.Log("FIRE!");
-            FireBullet();
+            if (!shot)
+            {
+                Debug.Log("FIRE!");
+                FireBullet();
+                shot = true;
+            }
+        }
+        else
+        {
+            shot = false;
         }
 
 

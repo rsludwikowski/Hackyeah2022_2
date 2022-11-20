@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
-
-
     public int maxHealth = 3;
     public int currentHealth;
-    public Transform bulletSpawn;
+    public Transform bulletSpawn1;
+    public Transform bulletSpawn2;
+    public Transform bulletSpawn3;
     public GameObject bulletPrefab;
     public float bulletSpeed = 30;
     public float bulletTime = 30;
@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour
         {
             lastfired = Time.time;
             Debug.Log("FIREEEEEEEEE!!!\n");
-            EnemyFire();
+            EnemyFire1();
+            EnemyFire2();
+            EnemyFire3();
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -58,9 +60,22 @@ public class Enemy : MonoBehaviour
         Destroy(bullet);
     }
 
-    private void EnemyFire () {
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward*bulletSpeed, ForceMode.Impulse);
+    private void EnemyFire1() //srodek
+    {
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn1.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn1.forward * bulletSpeed, ForceMode.Impulse);
+        StartCoroutine(DestroyBullet(bullet, bulletTime));
+    }
+    private void EnemyFire2() //lewo
+    {
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn2.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().AddForce((bulletSpawn2.forward) * bulletSpeed, ForceMode.Impulse);
+        StartCoroutine(DestroyBullet(bullet, bulletTime));
+    }
+    private void EnemyFire3() //prawo
+    {
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn3.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().AddForce((bulletSpawn3.forward) * bulletSpeed, ForceMode.Impulse);
         StartCoroutine(DestroyBullet(bullet, bulletTime));
     }
 }
