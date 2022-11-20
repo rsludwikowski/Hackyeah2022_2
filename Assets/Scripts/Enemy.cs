@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void EnemyFire () {
-        GameObject bullet = Instantiate(bulletPrefab,bulletSpawn.position,Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward*bulletSpeed, ForceMode.Impulse);
         StartCoroutine(DestroyBullet(bullet, bulletTime));
     }
