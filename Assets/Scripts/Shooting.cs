@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour
     public int speed = 0;
     public int size = 0;
 
+    public float bulletLive = 3f;
+
     void Start()
     {
         rb.useGravity = false;
@@ -16,15 +18,16 @@ public class Shooting : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        rb.AddForce(0, 0, 1);
+        if (bulletLive <= 0) Destroy(gameObject);
+        bulletLive -= Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Crash!\n");
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

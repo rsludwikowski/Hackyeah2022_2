@@ -35,7 +35,7 @@ public class GiraffeMovement : MonoBehaviour
 
     void FireBullet()
     {
-        GameObject bullet = Instantiate(Bullet, bulletSpawnPoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(Bullet, bulletSpawnPoint.position, Quaternion.Euler(Quaternion.identity.eulerAngles.x, 180, Quaternion.identity.eulerAngles.z)) ;
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletEnergy, ForceMode.Impulse);
         particles.Play();
         

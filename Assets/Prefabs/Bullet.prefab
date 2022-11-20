@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3551501981181140800}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21909514, y: 0.2711474, z: 0.08983204}
+  m_Center: {x: -0.040056005, y: -0.004138842, z: -0.39251345}
 --- !u!114 &1305855413041218850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,9 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3551501981181140800}
-  bulletDamage: 0
+  bulletDamage: 1
   speed: 10
   size: 0
+  bulletLive: 3
 --- !u!54 &3551501981181140800
 Rigidbody:
   m_ObjectHideFlags: 0

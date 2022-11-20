@@ -72,6 +72,9 @@ MonoBehaviour:
   particles: {fileID: 894255077164800262}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
+  stats: 0
+  points: 0
+  fireRate: 800
   HP: 0
 --- !u!54 &4262447884005262085
 Rigidbody:
@@ -101,9 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e5d48e77334e64d8caaf29da472680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootBegin: {fileID: 0}
-  shootMid: {fileID: 0}
-  shootEnd: {fileID: 0}
+  shootBegin: {fileID: 3443145560856853707}
+  shootMid: {fileID: 7563894844782005633}
+  shootEnd: {fileID: 7917470997900230004}
   shooting: 0
 --- !u!82 &3443145560856853707
 AudioSource:
@@ -115,7 +118,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f450f959f49fa4e468226179a56f0848, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f9db622e17e1c0d4698c002119edb796, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -211,7 +214,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 958726cfd97dca446a50d47867dece5e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1cdf00c393040be4490621dad87eee67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -307,7 +310,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b739c78434455c41b0a200240390b60, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8ec156342818f194e9abc689b4113269, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -497,6 +500,9 @@ MonoBehaviour:
   particles: {fileID: 0}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
+  stats: 0
+  points: 0
+  fireRate: 800
   HP: 0
 --- !u!114 &4262447884005262090
 MonoBehaviour:
@@ -517,6 +523,9 @@ MonoBehaviour:
   particles: {fileID: 0}
   offsetSpawn: {x: 0, y: 0, z: 0}
   offFloat: 1
+  stats: 0
+  points: 0
+  fireRate: 800
   HP: 0
 --- !u!1 &8885582162856742299
 GameObject:
@@ -544,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8885582162856742299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34, y: 2.33, z: -1.72}
+  m_LocalPosition: {x: -0.34, y: 2.33, z: -2.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

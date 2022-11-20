@@ -34,9 +34,10 @@ public class Enemy : MonoBehaviour
         string colTag = collision.gameObject.tag;
         switch (colTag)
         {
-            case "EnemyBullet":
+            case "Bullet":
                 Shooting shooting = collision.gameObject.GetComponent<Shooting>();
                 Demage(shooting.bulletDamage);
+                Destroy(collision.gameObject);
                 break;
         }
 
@@ -60,7 +61,7 @@ public class Enemy : MonoBehaviour
 
     private void EnemyFire () {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward*bulletSpeed, ForceMode.Impulse);
+        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward*(bulletSpeed), ForceMode.Impulse);
         StartCoroutine(DestroyBullet(bullet, bulletTime));
     }
 }
